@@ -84,7 +84,7 @@ export default {
   methods:{
     loadData: function( pageNum, pageSize){ 
         var _self=this;                 
-        this.$ajax.get(_self.url).then(function(res){
+        this.$store.dispatch('saveForm').then(function(res){
             _self.tableData = res.data.slice((pageNum-1)*pageSize,pageNum*pageSize);
             _self.totalCount=res.data.length;
             

@@ -24,7 +24,11 @@ npm run build
 npm run build --report
 
 
+
 element-ui 对axios请求到的数据进行分页
+
+
+使用vuex的dispatch对axios请求的数据进行分发
 ```
 
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
