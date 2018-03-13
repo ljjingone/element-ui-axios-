@@ -1,7 +1,7 @@
 <template>
   <div class="head" >
      
-<h1>余额数量</h1>
+<!-- <h1>余额数量</h1> -->
       
   </div>
 </template>
