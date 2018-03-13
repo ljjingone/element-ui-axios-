@@ -5,13 +5,13 @@
         <span>{{blog.author}}</span>
         <span></span>
       </div> -->
-      <!-- <div>
+      <div>
         <button @click="$store.commit('reduce')">-</button>
         <span>{{$store.state.count}}</span>
         <button @click="$store.commit('add',10)">+</button>
         <span>{{$store.state.haha}}</span>
         <button @click="$store.commit('became')">became</button>
-      </div> -->
+      </div>
       <!-- <el-table
         v-loading.fullscreen.lock="fullscreenLoading"
         :data="tableData"
@@ -131,7 +131,7 @@
 </template>
 <script>
 // import Data from '@/data.json'
-// import store from '@/store'
+import store from '@/store'
 export default {
   name: 'HelloWorld',
  data(){
@@ -150,7 +150,7 @@ export default {
       // fullscreenLoading: true
     }
   },
-  // store,
+  store,
   created(){
     var _self=this;
     this.$ajax.get(_self.$host+'/get?r=2czkhbdmsfv&sort_by=poll').then(function(response){
@@ -162,7 +162,7 @@ export default {
     // })
     // this.loadData( _self.currentPage, _self.pagesize)
     // this.tableData=Data.data.items;
-      
+     this.$store.commit('became');
   },
   methods:{
     
