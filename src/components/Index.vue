@@ -140,7 +140,7 @@ export default {
       //表格当前页数据
       tableData: [],
       //请求的URL
-      url:'https://api.hadax.com/vote/open/vote/get?r=2czkhbdmsfv&sort_by=poll',
+      // url:'https://api.hadax.com/vote/open/vote/get?r=2czkhbdmsfv&sort_by=poll',
       //默认每页数据量
       // pagesize: 4,
       //当前页码
@@ -153,13 +153,14 @@ export default {
   // store,
   created(){
     var _self=this;
-    // this.$ajax.get('http://127.0.0.1:3001/mian').then(function(response){
-    //   _self.tableData=response.data;
-    // })
+    this.$ajax.get(_self.$host+'/get?r=2czkhbdmsfv&sort_by=poll').then(function(response){
+        console.log(response);
+        _self.tableData = response.data.data.items;
+    })
     // this.$ajax.get('http://127.0.0.1:3001/posts?_page=2&_limit=3').then(function(response){
     //   _self.blogs=response.data;
     // })
-    this.loadData( _self.currentPage, _self.pagesize)
+    // this.loadData( _self.currentPage, _self.pagesize)
     // this.tableData=Data.data.items;
       
   },

@@ -9,6 +9,8 @@ import Routes from './routes'
 import 'element-ui/lib/theme-chalk/index.css'
 import storeConfig from './store'
 
+Vue.prototype.$host = '/get'
+
 Vue.use(Element)
 
 

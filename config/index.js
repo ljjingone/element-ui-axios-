@@ -10,7 +10,15 @@ module.exports = {
     // Paths
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
-    proxyTable: {},
+    proxyTable: {
+      '/get': {
+          target: 'https://api.hadax.com/vote/open/vote',
+          changeOrigin: true,
+          pathRewrite: {
+              '^/get': ''
+          }
+      }
+    },
 
     // Various Dev Server settings
     host: 'localhost', // can be overwritten by process.env.HOST

@@ -19,7 +19,6 @@ const mutations={
         state.haha="你好 世界！！！"
     }
 }
-axios.get('http://127.0.0.1:3001/posts')
 const actions={
     saveForm (context) {
         return axios.get('http://127.0.0.1:3001/posts')
